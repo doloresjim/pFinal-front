@@ -166,6 +166,8 @@ const Logs = () => {
         });
     };
 
+    console.log('Server1');
+
     return (
         <div className="container mt-4">
             <h3 className="text-center">Gráfica de Logs</h3>

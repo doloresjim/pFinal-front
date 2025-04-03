@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import Logs from "./pages/Logs";
 
 function App() {
+    // Cambio aquí
+    // Lala estuvo aquí
     return (
         <Router>
             <Routes>
