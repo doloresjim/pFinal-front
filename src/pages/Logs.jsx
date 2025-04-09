@@ -14,7 +14,7 @@ const Logs = () => {
     const [responseTimeData, setResponseTimeData] = useState(null);
     const [dailyChartData, setDailyChartData] = useState(null); 
     const [methodChartData, setMethodChartData] = useState(null); 
-
+console.log(logs);
     useEffect(() => {
         axios.get("http://localhost:5001/getServer")
             .then(response => {

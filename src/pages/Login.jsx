@@ -315,33 +315,3 @@ const Login = () => {
 
 export default Login;
 
-
-
-/*
-const handleGetUser = async (e) => {
-        e.preventDefault(); 
-            try{
-                const res = await axios.get("http://localhost:5001/getInfo", { 
-                    email, 
-                }); 
-                setUserData(res.data.user);
-                console.log(userData);
-                cleanData(e);
-                }catch(error){
-                alert("Error al obtener la información del usuario");
-                }
-
-        }; 
-
-{step === "home" && (
-    <div>
-        <button className="btn btn-success m-2" onClick={handleGetUser}>Obtener Información del Usuario</button>
-        {userData && (
-            <div>
-                <h3>Información del Usuario:</h3>
-                <p>username: {userData.username}</p>
-                <p>email: {userData.email}</p> 
-            </div>
-        )}
-    </div>
-)}*/

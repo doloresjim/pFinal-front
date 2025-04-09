@@ -1,34 +1,12 @@
-import React, { useState, useEffect } from 'react'; 
-import axios from 'axios'; 
+import React  from 'react'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useLocation, useNavigate } from 'react-router-dom'; 
+import {  useNavigate } from 'react-router-dom'; 
 
 const Home = () => {  
-    const navigate = useNavigate();
-    const [ userData, setUserData]  = useState();
-    const location = useLocation();
-    const params = new URLSearchParams(location.search);
-    const idUs = params.get("idUs");
-
+    const navigate = useNavigate();  
     const handleClick = () => {
         navigate('/logs'); // Redirige a la página de logs
-      };
-    
-    useEffect(() => {
-        if(idUs){
-            handleGetUser();
-        }
-    }, [idUs]);
-    
-    const handleGetUser = async () => { 
-        try{
-            const res = await axios.get(`http://localhost:5001/getInfo?idUs=${idUs}`); 
-            setUserData(res.data.user); 
-            }catch(error){
-            alert("Error al obtener la información del usuario");
-            }
-
-    }; 
+      }; 
     
     return (
         <div className="d-flex justify-content-center align-items-center bg-light mt-3 pt-2 mb-4">
